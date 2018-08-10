@@ -1,6 +1,9 @@
 # detect-bootloader
 This is the source for the detect sensor bootloader. It uses Nordic's BLE Secure DFU bootloader.
 
+**TODO
+This repo is huge! Remove all unnecessary code.
+
 ## Compiling
 Using nRF5 SDK V15.0.0 (included in source) found [here](http://linkhttps://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/)
 
