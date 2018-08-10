@@ -2,8 +2,8 @@ PROJECT_NAME     := secure_bootloader_ble_s140_pca10056
 TARGETS          := nrf52840_xxaa_s140
 OUTPUT_DIRECTORY := _build
 
-SDK_ROOT := ../../../../..
-PROJ_DIR := ../..
+SDK_ROOT := .
+PROJ_DIR := .
 
 $(OUTPUT_DIRECTORY)/nrf52840_xxaa_s140.out: \
   LINKER_SCRIPT  := secure_bootloader_gcc_nrf52.ld
@@ -45,7 +45,7 @@ SRC_FILES += \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_hash.c \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_init.c \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_shared.c \
-  $(PROJ_DIR)/../dfu_public_key.c \
+  $(PROJ_DIR)/dfu_public_key.c \
   $(PROJ_DIR)/main.c \
   $(SDK_ROOT)/components/libraries/bootloader/dfu/nrf_dfu_svci.c \
   $(SDK_ROOT)/components/libraries/bootloader/dfu/nrf_dfu_svci_handler.c \
@@ -106,7 +106,6 @@ INC_FOLDERS += \
   $(SDK_ROOT)/components/libraries/bootloader \
   $(SDK_ROOT)/components/softdevice/s140/headers \
   $(SDK_ROOT)/components/libraries/crypto \
-  ../config \
   $(SDK_ROOT)/components/libraries/scheduler \
   $(SDK_ROOT)/external/nrf_cc310_bl/include \
   $(SDK_ROOT)/components/libraries/experimental_log/src \
