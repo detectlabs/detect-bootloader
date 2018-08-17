@@ -2,11 +2,11 @@ PROJECT_NAME     := secure_bootloader_ble_s140_pca10056
 TARGETS          := nrf52840_xxaa_s140
 OUTPUT_DIRECTORY := _build
 
-SDK_ROOT := .
-PROJ_DIR := .
+SDK_ROOT := nordic_nRF5
+PROJ_DIR := source
 
 $(OUTPUT_DIRECTORY)/nrf52840_xxaa_s140.out: \
-  LINKER_SCRIPT  := secure_bootloader_gcc_nrf52.ld
+  LINKER_SCRIPT  := ./source/secure_bootloader_gcc_nrf52.ld
 
 # Source files common to all targets
 SRC_FILES += \
