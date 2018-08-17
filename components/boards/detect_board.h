@@ -52,10 +52,11 @@ extern "C" {
 #define LED_1          NRF_GPIO_PIN_MAP(1,06) //BLUE
 #define LED_2          NRF_GPIO_PIN_MAP(1,04) //GREEN
 #define LED_3          NRF_GPIO_PIN_MAP(1,02) //RED
+
 #define LED_START      LED_1
 #define LED_STOP       LED_3
 
-#define LEDS_ACTIVE_STATE 1
+#define LEDS_ACTIVE_STATE 0
 
 #define LEDS_LIST { LED_1, LED_2, LED_3 }
 
