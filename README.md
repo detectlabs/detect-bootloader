@@ -17,21 +17,24 @@ or
 'components/toolchain/gcc/Makefile.windows' for Windows*
 
 ## Programming
-Using nrfjprog utlilty found [here](http://linkhttps://www.nordicsemi.com/eng/Products/nRF52840)
+Using nrfjprog utlilty found [here](https://www.nordicsemi.com/eng/Products/nRF52840)
 
 ## Programmer / Debugger
-Using J-Link Plus found [here](http://linkhttps://www.segger.com/products/debug-probes/j-link/models/j-link-plus/)
+Using J-Link Plus found [here](https://www.segger.com/products/debug-probes/j-link/models/j-link-plus/)
 
 Using JTAG 20 pin 0.1 inch to 10 pin 0.05 inch adapter found [here](https://www.olimex.com/Products/ARM/JTAG/ARM-JTAG-20-10/)  
 
-Using J-Link Software found [here](http://linkhttps://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack)
+Using J-Link Software found [here](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack)
 
 ## Nordic Semiconductor Docs
 
-[BLE Secure DFU Bootloader Docs](http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v15.0.0%2Fgetting_started_installing.html)
+[BLE Secure DFU Bootloader Docs](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v15.0.0%2Fble_sdk_app_secure_bootloader.html)
 
 ## Bootloader Keys
 
-If you want to compile [detect-firmware](http://linkhttps://github.com/detectlabs/detect-firmware) and use Over-the-Air update, you will need to generate your own keys and update the public key in *dfu_public_key.c*. Find instructions [here](http://linkhttp://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v15.0.0%2Flib_bootloader_dfu_keys.html).
+If you want to compile [detect-firmware](https://github.com/detectlabs/detect-firmware) and use Over-the-Air update, you will need to generate your own keys and update the public key in *dfu_public_key.c*. Find instructions [here](https://infocenter.nordicsemi.com/topic/com.nordic.infocenter.sdk5.v15.0.0/lib_bootloader_dfu_keys.html).
 
 ## Creating Bootloader Package
+```
+nrfutil pkg generate --hw-version 52 --application-version 1 --application nrf52840_xxaa.hex --sd-req 0xA9 --key-file private.pem app_dfu_package.zip
+```
